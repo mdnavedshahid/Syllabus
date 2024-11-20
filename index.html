@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating Systems Syllabus Checklist</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+        }
+        #checklist {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        li:hover {
+            background: #f8f9fa;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.5);
+            cursor: pointer;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px auto;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Operating Systems Syllabus Checklist</h1>
+<div id="checklist">
+    <ul>
+        <li><input type="checkbox"> Introduction: Operating system and functions</li>
+        <li><input type="checkbox"> Classification of Operating systems: Batch, Interactive, Time sharing</li>
+        <li><input type="checkbox"> Real Time System, Multiuser Systems, Multiprocessor Systems</li>
+        <li><input type="checkbox"> Multi process Systems, Multithreaded Systems</li>
+        <li><input type="checkbox"> Operating System: Structure - Layered structure</li>
+        <li><input type="checkbox"> System Components</li>
+        <li><input type="checkbox"> Operating system Services</li>
+        <li><input type="checkbox"> Process Concept, Process States, Process Transition Diagram</li>
+        <li><input type="checkbox"> Process Control Block (PCB)</li>
+        <li><input type="checkbox"> Process address space, Process identification</li>
+        <li><input type="checkbox"> Threads and their management, Multithreading Models</li>
+        <li><input type="checkbox"> CPU Scheduling Concepts, Scheduling Criteria, Schedulers</li>
+        <li><input type="checkbox"> Scheduling Algorithms (FCFS, SJF)</li>
+        <li><input type="checkbox"> Scheduling Algorithms (Priority Scheduling Algorithm)</li>
+        <li><input type="checkbox"> Scheduling Algorithms (RR, Multilevel queue)</li>
+        <li><input type="checkbox"> Scheduling Algorithms (Multilevel queue and Multilevel feedback Queue)</li>
+        <li><input type="checkbox"> Multiprocessor Scheduling</li>
+        <li><input type="checkbox"> Concurrent Processes</li>
+        <li><input type="checkbox"> Principle of Concurrency</li>
+        <li><input type="checkbox"> Producer / Consumer Problem, Mutual Exclusion</li>
+        <li><input type="checkbox"> Critical Section Problem</li>
+        <li><input type="checkbox"> Semaphores, Test and Set operation</li>
+        <li><input type="checkbox"> Classical Problem in Concurrency</li>
+        <li><input type="checkbox"> Dining Philosopher Problem</li>
+        <li><input type="checkbox"> Inter Process Communication models and Schemes</li>
+        <li><input type="checkbox"> Deadlock: System model, Deadlock characterization</li>
+        <li><input type="checkbox"> Deadlock: Prevention</li>
+        <li><input type="checkbox"> Avoidance and detection, Recovery from deadlock</li>
+        <li><input type="checkbox"> Memory Management: Introduction</li>
+        <li><input type="checkbox"> Multiprogramming with fixed partitions & variable partitions</li>
+        <li><input type="checkbox"> Protection schemes, Paging</li>
+        <li><input type="checkbox"> Segmentation, Paged segmentation</li>
+        <li><input type="checkbox"> Virtual memory concepts</li>
+        <li><input type="checkbox"> Demand paging, Performance of demand paging</li>
+        <li><input type="checkbox"> Page replacement algorithms, Page fault</li>
+        <li><input type="checkbox"> Thrashing, Cache memory organization</li>
+        <li><input type="checkbox"> Locality of reference</li>
+        <li><input type="checkbox"> I/O Management and Disk Scheduling: I/O devices, and I/O subsystems</li>
+        <li><input type="checkbox"> I/O buffering, Disk storage and Disk scheduling</li>
+        <li><input type="checkbox"> RAID File System: File concept, File organization and access mechanism</li>
+        <li><input type="checkbox"> File directories, and File sharing</li>
+        <li><input type="checkbox"> File system implementation issues</li>
+        <li><input type="checkbox"> File system Protection and securities</li>
+        <li><input type="checkbox"> Recent Trends and Development</li>
+        <li><input type="checkbox"> Practice Problems</li>
+    </ul>
+    <button class="button" onclick="alert('Checklist saved!')">Save Checklist</button>
+</div>
+
+<script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                this.parentElement.classList.add('completed');
+            } else {
+                this.parentElement.classList.remove('completed');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
